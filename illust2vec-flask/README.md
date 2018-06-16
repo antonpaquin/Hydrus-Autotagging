@@ -10,7 +10,7 @@ git clone https://github.com/antonpaquin/Hydrus-Autotagging
 cd Hydrus-Autotagging/illust2vec-flask
 
 # Get the model
-wget <url> 
+wget https://github.com/antonpaquin/Hydrus-Autotagging/releases/download/0.1/illust2vec.h5
 # Or just download it yourself and put it here
 
 # Create a virtualenv to keep your python clean
