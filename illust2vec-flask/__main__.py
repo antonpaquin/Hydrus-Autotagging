@@ -31,7 +31,7 @@ def main():
             img_numpy = img_numpy.reshape((224, 224, 4))[:,:,:3]
             img_numpy = img_numpy[:,:,:3]
 
-    except ZeroDivisionError:
+    except IOError:
         return 'bad image', 400
 
     results = classify(img_numpy, threshold)
