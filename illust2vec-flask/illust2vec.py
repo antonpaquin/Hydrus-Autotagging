@@ -18,6 +18,6 @@ class NeuralNetworkTagger:
         resized_img = pil_img.resize(size, Image.BILINEAR)
         img = Image.new('RGB', (input_size, input_size))
         img.paste(resized_img, ((input_size-size[0])//2, (input_size-size[1]//2)))
-        data = np.asarray(img).reshape((1, 224, 224, 3))
+        data = np.asarray(img).reshape((1, input_size, input_size, 3))
         predict = self.model.predict(data).reshape(len(self.tag_list))
         return dict(zip(self.tag_list, predict))
